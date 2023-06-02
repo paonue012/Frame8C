@@ -20,6 +20,7 @@ def about_view(request):
     name = "Cruz Salinas Jesus Arturo"
     matter = "Web Framework Programming"
     group ="8vo Semester C"
+    period = "January-June 2023"
 
 
     average = 40 + 60
