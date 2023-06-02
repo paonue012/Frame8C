@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h4><a class="btn btn-primary" href="{% url 'add_student' %}">Agregar</a></h4>
+<table class="table">
+   <tr>
+      <td>Id</td>
+      <td>Nombre</td>
+      <td>Apellido Paterno</td>
+      <td>Apellido Materno</td>
+      <td>Genero</td>
+      <td>Fecha Nacimiento</td>
+      <td>Acción</td>
+   </tr>
+   {% for student in students %}
+   <tr>
+      <td>{{student.id}}</td>
+      <td>{{student.name}}</td>
+      <td> {{student.first_name}}</td>
+      <td>{{student.second_name}}</td>
+      <td>{% if student.gender == "M"  %}Masculino{% else %}Femenino{% endif %}</td>
+      <td>{{student.birth_date}}</td>
+      <td><a href="{% url 'update_student' student_id=student.id  %}">Editar</a> / <a href="{% url 'delete_student' student_id=student.id  %}">Eliminar</a></td>
+   </tr>
+   {% endfor %}
+</table>
+
+
+     <br>
+
+
+{% endblock %}
+{% block js %}
+
+$(function() {
+    console.log( "ready!" );
+});
+
+{% endblock %}

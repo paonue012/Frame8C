@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    h1{
+    font-size: 20px;
+    }
+</style>
+<h1>{{proyecto}}<br>{{nombre}}<br>{{telefono}}<br>{{correo}}</h1>
+         {% for item in lista %}
+         {% endfor %}
+
+{% endblock %}

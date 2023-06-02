@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+    h1{
+    font-size: 20px;
+    }
+</style>
+<h1>{{proyecto}}<br>{{nombre}}<br>{{materia}} {{group}}<br>{{semestre}}<br>{{periodo}}</h1>
+         {% for item in lista %}
+         {% endfor %}
+
+<!--<p>Date: <input type="text" id="datepicker"></p>-->
+{% endblock %}
+
+{% block js %}
+
+$(function() {
+    console.log( "ready!" );
+        alert("Esto es Home");
+    $( "#datepicker" ).datepicker();
+
+});
+
+{% endblock %}
