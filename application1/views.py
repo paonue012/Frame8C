@@ -17,7 +17,7 @@ def ruta_nueva_view(self):
 
 def about_view(request):
     project = "Book catalog final project"
-    name = "Cruz Salinas Jesus Arturo"
+    name = "Cruz Salinas Jesus Arturo y Nuñez Enriquez Paola"
     matter = "Web Framework Programming"
     group ="8vo Semester C"
     period = "January-June 2023"
@@ -51,9 +51,19 @@ def home_view(request):
 
 def contact_view(request):
     project = "Book catalog final project"
-    name = "Nuñez Enriquez paola"
-    phone = "9612547252"
-    email = "l19270353@tuxtla.tecnm.mx"
+    name = "Nazar Poumian Alejandro"
+    phone = "9611772634"
+    email = "l19270163@tuxtla.tecnm.mx"
+    var_context = {
+        "title": "CONTACT US",
+        "proyecto": project,
+        "nombre": name,
+        "telefono": phone,
+        "correo": email
+    }
+    name = "Omar Aldair Rodriguez Vicente"
+    phone = "9616383969"
+    email = "l19270172@tuxtla.tecnm.mx"
     var_context = {
         "title": "CONTACT US",
         "proyecto": project,
